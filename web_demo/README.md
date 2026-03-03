@@ -1,26 +1,26 @@
-# Hunyuan3D Web Demo
+# Web Demo（FastAPI + model-viewer）
 
-FastAPI + `<model-viewer>` demo for turning images into GLB meshes via Hunyuan3D-2.
+此目录是 Fork 版本新增的 Web 交互模块，用于将图片上传、3D 生成、在线预览整合为单页应用。
 
-## Prerequisites
-- Python 3.9+
-- PyTorch (with MPS/CPU support). Install matching build for your platform.
-- Model weights placed in `./models` and environment variable `HY3DGEN_MODELS` pointing to that folder.
+## 目录说明
 
-## Setup
+- `backend/app/main.py`：FastAPI 入口与路由
+- `backend/app/jobs.py`：任务队列与状态管理
+- `backend/app/pipeline.py`：模型加载与推理调用
+- `backend/static/`：前端页面与样式脚本
+- `outputs/`：生成结果目录（已在 `.gitignore`）
+- `tmp/`：上传缓存目录（已在 `.gitignore`）
+
+## 启动方式
+
+请优先参考仓库根目录 `README.md` 的完整安装流程。安装依赖后运行：
+
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -e .  # installs hy3dgen package from this repo
-pip install fastapi uvicorn pydantic pillow
-```
-
-## Run
-```bash
-export HY3DGEN_MODELS=./models
 uvicorn web_demo.backend.app.main:app --host 0.0.0.0 --port 8000
-# Then open http://localhost:8000
 ```
 
-Outputs are saved to `web_demo/outputs`, uploads cached under `web_demo/tmp`.
+打开 `http://127.0.0.1:8000` 即可使用。
+
+## 环境变量
+
+Web Demo 支持通过环境变量配置模型与运行参数，详见根目录 `README.md` 的「可配置环境变量」章节。

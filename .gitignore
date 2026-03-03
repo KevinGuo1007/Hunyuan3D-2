@@ -170,3 +170,16 @@ gradio_cache/
 
 .vscode/
 models/
+
+# Local artifacts for this fork
+hy3d-venv/
+out.glb
+test.py
+assets/demo_notrans*.png
+web_demo/outputs/
+web_demo/tmp/
+
+# Local design notes
+web-demo设计文档.md
+web_demo/报告文档.md
+web_demo/*.puml
