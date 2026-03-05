@@ -1,0 +1,1 @@
+import{_ as t,y as a,z as n,A as e,R as r}from"./MkWC_6gz.js";const d={},c={class:"app"},l={class:"page"};function _(o,s){return a(),n("div",c,[e("main",l,[r(o.$slots,"default",{},void 0)]),s[0]||(s[0]=e("footer",{class:"footer"},[e("p",null,"made by 无畏契约赋能组")],-1))])}const p=t(d,[["render",_],["__scopeId","data-v-5f311709"]]);export{p as default};
