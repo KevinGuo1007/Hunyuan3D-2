@@ -4,19 +4,43 @@
 
 ## 目录说明
 
+### 后端模块
 - `backend/app/main.py`：FastAPI 入口与路由
 - `backend/app/jobs.py`：任务队列与状态管理
 - `backend/app/pipeline.py`：模型加载与推理调用
-- `backend/static/`：前端页面与样式脚本
+- `backend/app/settings.py`：应用配置
+
+### 前端模块
+- `backend/nuxt/`：Nuxt.js 前端框架目录
+- `backend/static/`：前端构建输出目录
+
+### 存储目录
 - `outputs/`：生成结果目录（已在 `.gitignore`）
 - `tmp/`：上传缓存目录（已在 `.gitignore`）
 
 ## 启动方式
 
-请优先参考仓库根目录 `README.md` 的完整安装流程。安装依赖后运行：
+请优先参考仓库根目录 `README.md` 的完整安装流程。
+
+### 1. 安装依赖
 
 ```bash
-uvicorn web_demo.backend.app.main:app --host 0.0.0.0 --port 8000
+# 安装前端依赖（在 nuxt 目录）
+cd web_demo/backend/nuxt
+npm install
+```
+### 2. 构建前端
+
+```bash
+cd web_demo/backend/nuxt
+npm run build
+```
+
+### 3. 启动后端
+
+```bash
+cd ../../..
+uvicorn web_demo.backend.app.main:app 
 ```
 
 打开 `http://127.0.0.1:8000` 即可使用。
