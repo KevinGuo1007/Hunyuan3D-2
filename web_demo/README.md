@@ -8,6 +8,7 @@
 - `backend/app/jobs.py`：任务队列与状态管理
 - `backend/app/pipeline.py`：模型加载与推理调用
 - `backend/static/`：前端页面与样式脚本
+- `backend/web/`：Nuxt.js 前端项目
 - `outputs/`：生成结果目录（已在 `.gitignore`）
 - `tmp/`：上传缓存目录（已在 `.gitignore`）
 

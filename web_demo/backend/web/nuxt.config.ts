@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     }
   },
   nitro: {
-    preset: 'static'
+    preset: 'static',
+    output: {
+      publicDir: '../static'
+    }
   }
 })
