@@ -1,1 +1,0 @@
-import{_ as a,y as o,z as n,A as e,K as r}from"./DPdyOELc.js";const d={},c={class:"app"},l={class:"page"};function _(t,s){return o(),n("div",c,[e("main",l,[r(t.$slots,"default",{},void 0,!0)]),s[0]||(s[0]=e("footer",{class:"footer"},[e("p",null,"made by 无畏契约赋能组")],-1))])}const p=a(d,[["render",_],["__scopeId","data-v-8ba9f181"]]);export{p as default};

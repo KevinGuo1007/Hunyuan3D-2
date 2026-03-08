@@ -18,6 +18,10 @@ export default defineNuxtConfig({
         '/api': {
           target: 'http://localhost:8000',
           changeOrigin: true,
+        },
+        '/api/jobs': {
+          target: 'http://localhost:8000',
+          changeOrigin: true,
         }
       }
     }
@@ -26,6 +30,11 @@ export default defineNuxtConfig({
     preset: 'static',
     output: {
       publicDir: '../static'
+    }
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag === 'model-viewer'
     }
   }
 })
