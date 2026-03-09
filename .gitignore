@@ -179,6 +179,12 @@ assets/demo_notrans*.png
 web_demo/outputs/
 web_demo/tmp/
 
+# Frontend build outputs (managed by web/.gitignore, but added here for safety)
+web_demo/backend/web/.nuxt/
+web_demo/backend/web/.output/
+web_demo/backend/web/dist/
+web_demo/backend/web/node_modules/
+
 # Local design notes
 web-demo设计文档.md
 web_demo/报告文档.md
